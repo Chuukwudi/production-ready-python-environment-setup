@@ -1,0 +1,1738 @@
+ERROR:root:An error occurred: index.html
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/code/src/main.py", line 27, in read_root
+    return templates.TemplateResponse("index.html", {"request": request})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/starlette/templating.py", line 229, in TemplateResponse
+    template = self.get_template(name)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/starlette/templating.py", line 143, in get_template
+    return self.env.get_template(name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/loaders.py", line 207, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+ERROR:root:An error occurred: ./src/index.html
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/code/src/main.py", line 27, in read_root
+    return templates.TemplateResponse("./src/index.html", {"request": request})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/starlette/templating.py", line 229, in TemplateResponse
+    template = self.get_template(name)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/starlette/templating.py", line 143, in get_template
+    return self.env.get_template(name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/loaders.py", line 207, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ./src/index.html
+ERROR:root:An error occurred: ./src/index.html
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/code/src/main.py", line 27, in read_root
+    return templates.TemplateResponse("./src/index.html", {"request": request})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/starlette/templating.py", line 229, in TemplateResponse
+    template = self.get_template(name)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/starlette/templating.py", line 143, in get_template
+    return self.env.get_template(name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/loaders.py", line 207, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ./src/index.html
+ERROR:root:An error occurred: ./index.html
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/code/src/main.py", line 27, in read_root
+    return templates.TemplateResponse("./index.html", {"request": request})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/starlette/templating.py", line 229, in TemplateResponse
+    template = self.get_template(name)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/starlette/templating.py", line 143, in get_template
+    return self.env.get_template(name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/loaders.py", line 207, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ./index.html
+ERROR:root:An error occurred: index.html
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/code/src/main.py", line 27, in read_root
+    return templates.TemplateResponse("index.html", {"request": request})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/starlette/templating.py", line 229, in TemplateResponse
+    template = self.get_template(name)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/starlette/templating.py", line 143, in get_template
+    return self.env.get_template(name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/loaders.py", line 207, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+ERROR:root:An error occurred: index.html
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/code/src/main.py", line 27, in read_root
+    return templates.TemplateResponse("index.html", {"request": request})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/starlette/templating.py", line 229, in TemplateResponse
+    template = self.get_template(name)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/starlette/templating.py", line 143, in get_template
+    return self.env.get_template(name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/jinja2/loaders.py", line 207, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+ERROR:root:An error occurred: 'NoneType' object has no attribute 'decode'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 193, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/starlette/concurrency.py", line 42, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/anyio/to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2177, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 859, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/code/src/main.py", line 45, in read_hits
+    "current_working_directory": r.get('cwd').decode('utf-8')}
+                                 ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'decode'
+ERROR:root:An error occurred: 'NoneType' object has no attribute 'decode'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 193, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/starlette/concurrency.py", line 42, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/anyio/to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2177, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 859, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/code/src/main.py", line 45, in read_hits
+    "current_working_directory": r.get('cwd').decode('utf-8')}
+                                 ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'decode'
+ERROR:root:An error occurred: 'NoneType' object has no attribute 'decode'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 193, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/starlette/concurrency.py", line 42, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func, *args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/anyio/to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2177, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 859, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/code/src/main.py", line 45, in read_hits
+    "current_working_directory": r.get('cwd').decode('utf-8')}
+                                 ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'decode'
+DEBUG:multipart.multipart:Calling on_field_start with no data
+DEBUG:multipart.multipart:Calling on_field_name with data[0:11]
+DEBUG:multipart.multipart:Calling on_field_data with data[12:68]
+DEBUG:multipart.multipart:Calling on_field_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:multipart.multipart:Calling on_field_start with no data
+DEBUG:multipart.multipart:Calling on_field_name with data[0:11]
+DEBUG:multipart.multipart:Calling on_field_data with data[12:68]
+DEBUG:multipart.multipart:Calling on_field_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:multipart.multipart:Calling on_field_start with no data
+DEBUG:multipart.multipart:Calling on_field_name with data[0:11]
+DEBUG:multipart.multipart:Calling on_field_data with data[12:52]
+DEBUG:multipart.multipart:Calling on_field_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:multipart.multipart:Calling on_field_start with no data
+DEBUG:multipart.multipart:Calling on_field_name with data[0:11]
+DEBUG:multipart.multipart:Calling on_field_data with data[12:52]
+DEBUG:multipart.multipart:Calling on_field_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:multipart.multipart:Calling on_field_start with no data
+DEBUG:multipart.multipart:Calling on_field_name with data[0:11]
+DEBUG:multipart.multipart:Calling on_field_data with data[12:52]
+DEBUG:multipart.multipart:Calling on_field_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:multipart.multipart:Calling on_field_start with no data
+DEBUG:multipart.multipart:Calling on_field_name with data[0:11]
+DEBUG:multipart.multipart:Calling on_field_data with data[12:52]
+DEBUG:multipart.multipart:Calling on_field_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:multipart.multipart:Calling on_field_start with no data
+DEBUG:multipart.multipart:Calling on_field_name with data[0:11]
+DEBUG:multipart.multipart:Calling on_field_data with data[12:52]
+DEBUG:multipart.multipart:Calling on_field_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:multipart.multipart:Calling on_field_start with no data
+DEBUG:multipart.multipart:Calling on_field_name with data[0:11]
+DEBUG:multipart.multipart:Calling on_field_data with data[12:116]
+DEBUG:multipart.multipart:Calling on_field_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:multipart.multipart:Calling on_field_start with no data
+DEBUG:multipart.multipart:Calling on_field_name with data[0:11]
+DEBUG:multipart.multipart:Calling on_field_data with data[12:116]
+DEBUG:multipart.multipart:Calling on_field_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+ERROR:root:An error occurred while processing the POST request: name 'lambda_handler' is not defined
+DEBUG:multipart.multipart:Calling on_field_start with no data
+DEBUG:multipart.multipart:Calling on_field_name with data[0:11]
+DEBUG:multipart.multipart:Calling on_field_data with data[12:116]
+DEBUG:multipart.multipart:Calling on_field_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+ERROR:root:An error occurred while processing the POST request: name 'lambda_handler' is not defined
+DEBUG:multipart.multipart:Calling on_field_start with no data
+DEBUG:multipart.multipart:Calling on_field_name with data[0:11]
+DEBUG:multipart.multipart:Calling on_field_data with data[12:52]
+DEBUG:multipart.multipart:Calling on_field_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:multipart.multipart:Calling on_field_start with no data
+DEBUG:multipart.multipart:Calling on_field_name with data[0:11]
+DEBUG:multipart.multipart:Calling on_field_data with data[12:52]
+DEBUG:multipart.multipart:Calling on_field_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:multipart.multipart:Calling on_field_start with no data
+DEBUG:multipart.multipart:Calling on_field_name with data[0:11]
+DEBUG:multipart.multipart:Calling on_field_data with data[12:116]
+DEBUG:multipart.multipart:Calling on_field_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:botocore.hooks:Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG:botocore.hooks:Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG:botocore.hooks:Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG:botocore.hooks:Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG:botocore.hooks:Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG:botocore.utils:IMDS ENDPOINT: http://169.254.169.254/
+DEBUG:botocore.credentials:Looking for credentials via: env
+DEBUG:botocore.credentials:Looking for credentials via: assume-role
+DEBUG:botocore.credentials:Looking for credentials via: assume-role-with-web-identity
+DEBUG:botocore.credentials:Looking for credentials via: sso
+DEBUG:botocore.credentials:Looking for credentials via: shared-credentials-file
+INFO:botocore.credentials:Found credentials in shared credentials file: ~/.aws/credentials
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/endpoints.json
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/sdk-default-configuration.json
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7f91c1134f40>
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/s3/2006-03-01/service-2.json.gz
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/s3/2006-03-01/endpoint-rule-set-1.json.gz
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/partitions.json
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x7f91c1295ee0>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x7f91c0ca1260>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x7f91c1295c60>
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: environment_service
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: environment_global
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: config_service
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: config_global
+DEBUG:botocore.configprovider:No configured endpoint found.
+DEBUG:botocore.endpoint:Setting s3 timeout as (60, 60)
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/_retry.json
+DEBUG:botocore.client:Registering retry handlers for service: s3
+DEBUG:botocore.utils:Registering S3 region redirector handler
+DEBUG:botocore.utils:Registering S3Express Identity Resolver
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function sse_md5 at 0x7f91c1136c00>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function validate_bucket_name at 0x7f91c1136b60>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x7f91c1154d60>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x7f91b9b9cb90>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x7f91c15089e0>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function generate_idempotent_uuid at 0x7f91c1136980>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x7f91c1154f40>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x7f91b9b9cb90>>
+DEBUG:botocore.regions:Calling endpoint provider with parameters: {'Bucket': 'flytta-email-input', 'Region': 'eu-west-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'casper.GVMS.email/spizarnia/004j334e87gn84qift29kml2fqfiqmj84kb8de01', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+DEBUG:botocore.regions:Endpoint provider result: https://flytta-email-input.s3.eu-west-1.amazonaws.com
+DEBUG:botocore.regions:Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+DEBUG:botocore.regions:Selected auth type "v4" as "v4" with signing context params: {'region': 'eu-west-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_expect_header at 0x7f91c1136f20>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x7f91b9b9d1f0>>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_recursion_detection_header at 0x7f91c1135e40>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function inject_api_version_header_if_needed at 0x7f91c11544a0>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=GetObject) with params: {'url_path': '/casper.GVMS.email/spizarnia/004j334e87gn84qift29kml2fqfiqmj84kb8de01', 'query_string': {}, 'method': 'GET', 'headers': {'User-Agent': 'Boto3/1.34.114 md/Botocore#1.34.114 ua/2.0 os/linux#5.15.146.1-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.12.3 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.114'}, 'body': b'', 'auth_path': '/flytta-email-input/casper.GVMS.email/spizarnia/004j334e87gn84qift29kml2fqfiqmj84kb8de01', 'url': 'https://flytta-email-input.s3.eu-west-1.amazonaws.com/casper.GVMS.email/spizarnia/004j334e87gn84qift29kml2fqfiqmj84kb8de01', 'context': {'client_region': 'eu-west-1', 'client_config': <botocore.config.Config object at 0x7f91c0f001d0>, 'has_streaming_input': False, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'flytta-email-input', 'params': {'Bucket': 'flytta-email-input', 'Key': 'casper.GVMS.email/spizarnia/004j334e87gn84qift29kml2fqfiqmj84kb8de01'}}, 'input_params': {'Bucket': 'flytta-email-input', 'Key': 'casper.GVMS.email/spizarnia/004j334e87gn84qift29kml2fqfiqmj84kb8de01'}, 'signing': {'region': 'eu-west-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'eu-west-1'}]}}}
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f91b9b4e3c0>>
+DEBUG:botocore.hooks:Event choose-signer.s3.GetObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x7f91c15089e0>>
+DEBUG:botocore.hooks:Event choose-signer.s3.GetObject: calling handler <function set_operation_specific_signer at 0x7f91c1136840>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <function remove_arn_from_signing_path at 0x7f91c1154ea0>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x7f91b9b9d1f0>>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+GET
+/casper.GVMS.email/spizarnia/004j334e87gn84qift29kml2fqfiqmj84kb8de01
+
+host:flytta-email-input.s3.eu-west-1.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20240529T150224Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20240529T150224Z
+20240529/eu-west-1/s3/aws4_request
+bf1a51b9475d76bfdceeebc0ba3c5f7dbe6924d791bbef260d7a04b1dc520cf7
+DEBUG:botocore.auth:Signature:
+500d2aa963271a661258076f254863e57b80bb639bf7740ab029ab7d5766b26a
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <function add_retry_headers at 0x7f91c1154cc0>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=True, method=GET, url=https://flytta-email-input.s3.eu-west-1.amazonaws.com/casper.GVMS.email/spizarnia/004j334e87gn84qift29kml2fqfiqmj84kb8de01, headers={'User-Agent': b'Boto3/1.34.114 md/Botocore#1.34.114 ua/2.0 os/linux#5.15.146.1-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.12.3 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.114', 'X-Amz-Date': b'20240529T150224Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA47CR267TIKQ7F5W5/20240529/eu-west-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=500d2aa963271a661258076f254863e57b80bb639bf7740ab029ab7d5766b26a', 'amz-sdk-invocation-id': b'109f6a52-5789-4f6a-aedf-ccb9bc047acc', 'amz-sdk-request': b'attempt=1'}>
+DEBUG:botocore.httpsession:Certificate path: /usr/local/lib/python3.12/site-packages/certifi/cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): flytta-email-input.s3.eu-west-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://flytta-email-input.s3.eu-west-1.amazonaws.com:443 "GET /casper.GVMS.email/spizarnia/004j334e87gn84qift29kml2fqfiqmj84kb8de01 HTTP/1.1" 200 187837
+DEBUG:botocore.parsers:Response headers: {'x-amz-id-2': '/8VNaAqJplvwp51BTVKhZxyS0wSJWUXRLFqmWTuhIN8TCta7efAu6SaIXdKi77496Jz11HR6Clw=', 'x-amz-request-id': 'BSPZWBGN6RVA032J', 'Date': 'Wed, 29 May 2024 15:02:25 GMT', 'Last-Modified': 'Sat, 20 Apr 2024 00:47:57 GMT', 'ETag': '"8ab5d77200ffe9a97c9b50407b99f069"', 'x-amz-server-side-encryption': 'AES256', 'Accept-Ranges': 'bytes', 'Content-Type': 'application/octet-stream', 'Server': 'AmazonS3', 'Content-Length': '187837'}
+DEBUG:botocore.parsers:Response body:
+<botocore.response.StreamingBody object at 0x7f91b9b9f8e0>
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <botocore.retryhandler.RetryHandler object at 0x7f91b9b9d130>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x7f91b9b9cb90>>
+DEBUG:multipart.multipart:Calling on_field_start with no data
+DEBUG:multipart.multipart:Calling on_field_name with data[0:11]
+DEBUG:multipart.multipart:Calling on_field_data with data[12:116]
+DEBUG:multipart.multipart:Calling on_field_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:botocore.hooks:Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG:botocore.hooks:Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG:botocore.hooks:Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG:botocore.hooks:Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG:botocore.hooks:Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG:botocore.utils:IMDS ENDPOINT: http://169.254.169.254/
+DEBUG:botocore.credentials:Looking for credentials via: env
+DEBUG:botocore.credentials:Looking for credentials via: assume-role
+DEBUG:botocore.credentials:Looking for credentials via: assume-role-with-web-identity
+DEBUG:botocore.credentials:Looking for credentials via: sso
+DEBUG:botocore.credentials:Looking for credentials via: shared-credentials-file
+INFO:botocore.credentials:Found credentials in shared credentials file: ~/.aws/credentials
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/endpoints.json
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/sdk-default-configuration.json
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7f3d40318860>
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/s3/2006-03-01/service-2.json.gz
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/s3/2006-03-01/endpoint-rule-set-1.json.gz
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/partitions.json
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x7f3d40465800>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x7f3d3fda59e0>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x7f3d40465580>
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: environment_service
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: environment_global
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: config_service
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: config_global
+DEBUG:botocore.configprovider:No configured endpoint found.
+DEBUG:botocore.endpoint:Setting s3 timeout as (60, 60)
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/_retry.json
+DEBUG:botocore.client:Registering retry handlers for service: s3
+DEBUG:botocore.utils:Registering S3 region redirector handler
+DEBUG:botocore.utils:Registering S3Express Identity Resolver
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function sse_md5 at 0x7f3d4031a520>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function validate_bucket_name at 0x7f3d4031a480>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x7f3d40334680>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x7f3d3cd49880>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x7f3d3ceab1d0>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function generate_idempotent_uuid at 0x7f3d4031a2a0>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x7f3d40334860>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x7f3d3cd49880>>
+DEBUG:botocore.regions:Calling endpoint provider with parameters: {'Bucket': 'flytta-email-input', 'Region': 'eu-west-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'casper.GVMS.email/spizarnia/004j334e87gn84qift29kml2fqfiqmj84kb8de01', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+DEBUG:botocore.regions:Endpoint provider result: https://flytta-email-input.s3.eu-west-1.amazonaws.com
+DEBUG:botocore.regions:Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+DEBUG:botocore.regions:Selected auth type "v4" as "v4" with signing context params: {'region': 'eu-west-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_expect_header at 0x7f3d4031a840>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x7f3d3cd49eb0>>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_recursion_detection_header at 0x7f3d40319760>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function inject_api_version_header_if_needed at 0x7f3d4031bd80>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=GetObject) with params: {'url_path': '/casper.GVMS.email/spizarnia/004j334e87gn84qift29kml2fqfiqmj84kb8de01', 'query_string': {}, 'method': 'GET', 'headers': {'User-Agent': 'Boto3/1.34.114 md/Botocore#1.34.114 ua/2.0 os/linux#5.15.146.1-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.12.3 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.114'}, 'body': b'', 'auth_path': '/flytta-email-input/casper.GVMS.email/spizarnia/004j334e87gn84qift29kml2fqfiqmj84kb8de01', 'url': 'https://flytta-email-input.s3.eu-west-1.amazonaws.com/casper.GVMS.email/spizarnia/004j334e87gn84qift29kml2fqfiqmj84kb8de01', 'context': {'client_region': 'eu-west-1', 'client_config': <botocore.config.Config object at 0x7f3d3cceb950>, 'has_streaming_input': False, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'flytta-email-input', 'params': {'Bucket': 'flytta-email-input', 'Key': 'casper.GVMS.email/spizarnia/004j334e87gn84qift29kml2fqfiqmj84kb8de01'}}, 'input_params': {'Bucket': 'flytta-email-input', 'Key': 'casper.GVMS.email/spizarnia/004j334e87gn84qift29kml2fqfiqmj84kb8de01'}, 'signing': {'region': 'eu-west-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'eu-west-1'}]}}}
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f3d3cceb9b0>>
+DEBUG:botocore.hooks:Event choose-signer.s3.GetObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x7f3d3ceab1d0>>
+DEBUG:botocore.hooks:Event choose-signer.s3.GetObject: calling handler <function set_operation_specific_signer at 0x7f3d4031a160>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <function remove_arn_from_signing_path at 0x7f3d403347c0>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x7f3d3cd49eb0>>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+GET
+/casper.GVMS.email/spizarnia/004j334e87gn84qift29kml2fqfiqmj84kb8de01
+
+host:flytta-email-input.s3.eu-west-1.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20240529T150623Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20240529T150623Z
+20240529/eu-west-1/s3/aws4_request
+bbae45ca17213a136cbdb58302953cca9621dc9ce9dfdabfeec50c1811bed42e
+DEBUG:botocore.auth:Signature:
+2bcc1e36fb4f75e7ff306910e824aabed5c384ad12c6d5e49a63326c897e90e6
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <function add_retry_headers at 0x7f3d403345e0>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=True, method=GET, url=https://flytta-email-input.s3.eu-west-1.amazonaws.com/casper.GVMS.email/spizarnia/004j334e87gn84qift29kml2fqfiqmj84kb8de01, headers={'User-Agent': b'Boto3/1.34.114 md/Botocore#1.34.114 ua/2.0 os/linux#5.15.146.1-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.12.3 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.114', 'X-Amz-Date': b'20240529T150623Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA47CR267TIKQ7F5W5/20240529/eu-west-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=2bcc1e36fb4f75e7ff306910e824aabed5c384ad12c6d5e49a63326c897e90e6', 'amz-sdk-invocation-id': b'ef795cd9-93bf-48e6-913b-2723acd70c27', 'amz-sdk-request': b'attempt=1'}>
+DEBUG:botocore.httpsession:Certificate path: /usr/local/lib/python3.12/site-packages/certifi/cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): flytta-email-input.s3.eu-west-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://flytta-email-input.s3.eu-west-1.amazonaws.com:443 "GET /casper.GVMS.email/spizarnia/004j334e87gn84qift29kml2fqfiqmj84kb8de01 HTTP/1.1" 200 187837
+DEBUG:botocore.parsers:Response headers: {'x-amz-id-2': 'ZCussEmhdnfLO1Py/msnyAvVMONBp7h86GbLjzUErknCS/XNINyihR1wrfJwmPlqrP0qOGpyUA942nvwxNDleg==', 'x-amz-request-id': 'YCBVRTYNN3FJ5CDT', 'Date': 'Wed, 29 May 2024 15:06:24 GMT', 'Last-Modified': 'Sat, 20 Apr 2024 00:47:57 GMT', 'ETag': '"8ab5d77200ffe9a97c9b50407b99f069"', 'x-amz-server-side-encryption': 'AES256', 'Accept-Ranges': 'bytes', 'Content-Type': 'application/octet-stream', 'Server': 'AmazonS3', 'Content-Length': '187837'}
+DEBUG:botocore.parsers:Response body:
+<botocore.response.StreamingBody object at 0x7f3d3c9a8910>
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <botocore.retryhandler.RetryHandler object at 0x7f3d3cd49df0>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x7f3d3cd49880>>
+DEBUG:multipart.multipart:Calling on_field_start with no data
+DEBUG:multipart.multipart:Calling on_field_name with data[0:11]
+DEBUG:multipart.multipart:Calling on_field_data with data[12:116]
+DEBUG:multipart.multipart:Calling on_field_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:botocore.hooks:Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG:botocore.hooks:Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG:botocore.hooks:Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG:botocore.hooks:Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG:botocore.hooks:Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG:botocore.utils:IMDS ENDPOINT: http://169.254.169.254/
+DEBUG:botocore.credentials:Looking for credentials via: env
+DEBUG:botocore.credentials:Looking for credentials via: assume-role
+DEBUG:botocore.credentials:Looking for credentials via: assume-role-with-web-identity
+DEBUG:botocore.credentials:Looking for credentials via: sso
+DEBUG:botocore.credentials:Looking for credentials via: shared-credentials-file
+INFO:botocore.credentials:Found credentials in shared credentials file: ~/.aws/credentials
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/endpoints.json
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/sdk-default-configuration.json
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7f4f107fc860>
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/s3/2006-03-01/service-2.json.gz
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/s3/2006-03-01/endpoint-rule-set-1.json.gz
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/partitions.json
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x7f4f1094d800>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x7f4f1027d9e0>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x7f4f1094d580>
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: environment_service
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: environment_global
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: config_service
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: config_global
+DEBUG:botocore.configprovider:No configured endpoint found.
+DEBUG:botocore.endpoint:Setting s3 timeout as (60, 60)
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/_retry.json
+DEBUG:botocore.client:Registering retry handlers for service: s3
+DEBUG:botocore.utils:Registering S3 region redirector handler
+DEBUG:botocore.utils:Registering S3Express Identity Resolver
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function sse_md5 at 0x7f4f107fe520>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function validate_bucket_name at 0x7f4f107fe480>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x7f4f10818680>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x7f4f1264c4d0>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x7f4f108849e0>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function generate_idempotent_uuid at 0x7f4f107fe2a0>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x7f4f10818860>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x7f4f1264c4d0>>
+DEBUG:botocore.regions:Calling endpoint provider with parameters: {'Bucket': 'flytta-email-input', 'Region': 'eu-west-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'casper.GVMS.email/spizarnia/004j334e87gn84qift29kml2fqfiqmj84kb8de01', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+DEBUG:botocore.regions:Endpoint provider result: https://flytta-email-input.s3.eu-west-1.amazonaws.com
+DEBUG:botocore.regions:Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+DEBUG:botocore.regions:Selected auth type "v4" as "v4" with signing context params: {'region': 'eu-west-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_expect_header at 0x7f4f107fe840>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x7f4f0ce58ce0>>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_recursion_detection_header at 0x7f4f107fd760>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function inject_api_version_header_if_needed at 0x7f4f107ffd80>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=GetObject) with params: {'url_path': '/casper.GVMS.email/spizarnia/004j334e87gn84qift29kml2fqfiqmj84kb8de01', 'query_string': {}, 'method': 'GET', 'headers': {'User-Agent': 'Boto3/1.34.114 md/Botocore#1.34.114 ua/2.0 os/linux#5.15.146.1-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.12.3 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.114'}, 'body': b'', 'auth_path': '/flytta-email-input/casper.GVMS.email/spizarnia/004j334e87gn84qift29kml2fqfiqmj84kb8de01', 'url': 'https://flytta-email-input.s3.eu-west-1.amazonaws.com/casper.GVMS.email/spizarnia/004j334e87gn84qift29kml2fqfiqmj84kb8de01', 'context': {'client_region': 'eu-west-1', 'client_config': <botocore.config.Config object at 0x7f4f0d1f67e0>, 'has_streaming_input': False, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'flytta-email-input', 'params': {'Bucket': 'flytta-email-input', 'Key': 'casper.GVMS.email/spizarnia/004j334e87gn84qift29kml2fqfiqmj84kb8de01'}}, 'input_params': {'Bucket': 'flytta-email-input', 'Key': 'casper.GVMS.email/spizarnia/004j334e87gn84qift29kml2fqfiqmj84kb8de01'}, 'signing': {'region': 'eu-west-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'eu-west-1'}]}}}
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f4f0d1f6660>>
+DEBUG:botocore.hooks:Event choose-signer.s3.GetObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x7f4f108849e0>>
+DEBUG:botocore.hooks:Event choose-signer.s3.GetObject: calling handler <function set_operation_specific_signer at 0x7f4f107fe160>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <function remove_arn_from_signing_path at 0x7f4f108187c0>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x7f4f0ce58ce0>>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+GET
+/casper.GVMS.email/spizarnia/004j334e87gn84qift29kml2fqfiqmj84kb8de01
+
+host:flytta-email-input.s3.eu-west-1.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20240529T150645Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20240529T150645Z
+20240529/eu-west-1/s3/aws4_request
+56d4806506f9814d92936073abdcdd5346ab6bab7cbe58e729f721312c00101e
+DEBUG:botocore.auth:Signature:
+936847b55f89f5f139f42600faa93c2cb22ccaa2fe1ff909518e6721b1c05657
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <function add_retry_headers at 0x7f4f108185e0>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=True, method=GET, url=https://flytta-email-input.s3.eu-west-1.amazonaws.com/casper.GVMS.email/spizarnia/004j334e87gn84qift29kml2fqfiqmj84kb8de01, headers={'User-Agent': b'Boto3/1.34.114 md/Botocore#1.34.114 ua/2.0 os/linux#5.15.146.1-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.12.3 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.114', 'X-Amz-Date': b'20240529T150645Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA47CR267TIKQ7F5W5/20240529/eu-west-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=936847b55f89f5f139f42600faa93c2cb22ccaa2fe1ff909518e6721b1c05657', 'amz-sdk-invocation-id': b'd4c2982f-0c62-46cd-bf93-7aadb74c10a1', 'amz-sdk-request': b'attempt=1'}>
+DEBUG:botocore.httpsession:Certificate path: /usr/local/lib/python3.12/site-packages/certifi/cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): flytta-email-input.s3.eu-west-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://flytta-email-input.s3.eu-west-1.amazonaws.com:443 "GET /casper.GVMS.email/spizarnia/004j334e87gn84qift29kml2fqfiqmj84kb8de01 HTTP/1.1" 200 187837
+DEBUG:botocore.parsers:Response headers: {'x-amz-id-2': 'ule4OCz0NDi3Os7/H8Pl3/Kfb8j1duHMR4/NkSbIZTt4z42UvYYPsxcOmRty+ir+3FlXcuaIV40=', 'x-amz-request-id': '5B70VD07Q3FCPHVC', 'Date': 'Wed, 29 May 2024 15:06:47 GMT', 'Last-Modified': 'Sat, 20 Apr 2024 00:47:57 GMT', 'ETag': '"8ab5d77200ffe9a97c9b50407b99f069"', 'x-amz-server-side-encryption': 'AES256', 'Accept-Ranges': 'bytes', 'Content-Type': 'application/octet-stream', 'Server': 'AmazonS3', 'Content-Length': '187837'}
+DEBUG:botocore.parsers:Response body:
+<botocore.response.StreamingBody object at 0x7f4f0ce5b940>
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <botocore.retryhandler.RetryHandler object at 0x7f4f0ce58c20>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x7f4f1264c4d0>>
+DEBUG:multipart.multipart:Calling on_field_start with no data
+DEBUG:multipart.multipart:Calling on_field_name with data[0:11]
+DEBUG:multipart.multipart:Calling on_field_data with data[12:116]
+DEBUG:multipart.multipart:Calling on_field_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7f4f107fc860>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x7f4f1094d800>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x7f4f1027d9e0>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x7f4f1094d580>
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: environment_service
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: environment_global
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: config_service
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: config_global
+DEBUG:botocore.configprovider:No configured endpoint found.
+DEBUG:botocore.endpoint:Setting s3 timeout as (60, 60)
+DEBUG:botocore.client:Registering retry handlers for service: s3
+DEBUG:botocore.utils:Registering S3 region redirector handler
+DEBUG:botocore.utils:Registering S3Express Identity Resolver
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function sse_md5 at 0x7f4f107fe520>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function validate_bucket_name at 0x7f4f107fe480>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x7f4f10818680>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x7f4f0ceddf10>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x7f4f0d1f6900>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function generate_idempotent_uuid at 0x7f4f107fe2a0>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x7f4f10818860>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x7f4f0ceddf10>>
+DEBUG:botocore.regions:Calling endpoint provider with parameters: {'Bucket': 'flytta-email-input', 'Region': 'eu-west-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+DEBUG:botocore.regions:Endpoint provider result: https://flytta-email-input.s3.eu-west-1.amazonaws.com
+DEBUG:botocore.regions:Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+DEBUG:botocore.regions:Selected auth type "v4" as "v4" with signing context params: {'region': 'eu-west-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_expect_header at 0x7f4f107fe840>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x7f4f0cedeba0>>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_recursion_detection_header at 0x7f4f107fd760>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function inject_api_version_header_if_needed at 0x7f4f107ffd80>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=GetObject) with params: {'url_path': '/casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1', 'query_string': {}, 'method': 'GET', 'headers': {'User-Agent': 'Boto3/1.34.114 md/Botocore#1.34.114 ua/2.0 os/linux#5.15.146.1-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.12.3 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.114'}, 'body': b'', 'auth_path': '/flytta-email-input/casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1', 'url': 'https://flytta-email-input.s3.eu-west-1.amazonaws.com/casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1', 'context': {'client_region': 'eu-west-1', 'client_config': <botocore.config.Config object at 0x7f4f0d2cbf50>, 'has_streaming_input': False, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'flytta-email-input', 'params': {'Bucket': 'flytta-email-input', 'Key': 'casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1'}}, 'input_params': {'Bucket': 'flytta-email-input', 'Key': 'casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1'}, 'signing': {'region': 'eu-west-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'eu-west-1'}]}}}
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f4f0d2cbfe0>>
+DEBUG:botocore.hooks:Event choose-signer.s3.GetObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x7f4f0d1f6900>>
+DEBUG:botocore.hooks:Event choose-signer.s3.GetObject: calling handler <function set_operation_specific_signer at 0x7f4f107fe160>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <function remove_arn_from_signing_path at 0x7f4f108187c0>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x7f4f0cedeba0>>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+GET
+/casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1
+
+host:flytta-email-input.s3.eu-west-1.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20240529T150730Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20240529T150730Z
+20240529/eu-west-1/s3/aws4_request
+9a5bfaacfd92701569ac387172036fef21deaf707337382e544520f15a18f3b1
+DEBUG:botocore.auth:Signature:
+5dd7e7136f1eb434abbb55103dfc1cd4e29733a1f250d13dec749e1b8087e5c6
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <function add_retry_headers at 0x7f4f108185e0>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=True, method=GET, url=https://flytta-email-input.s3.eu-west-1.amazonaws.com/casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1, headers={'User-Agent': b'Boto3/1.34.114 md/Botocore#1.34.114 ua/2.0 os/linux#5.15.146.1-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.12.3 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.114', 'X-Amz-Date': b'20240529T150730Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA47CR267TIKQ7F5W5/20240529/eu-west-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=5dd7e7136f1eb434abbb55103dfc1cd4e29733a1f250d13dec749e1b8087e5c6', 'amz-sdk-invocation-id': b'89093a6a-7e15-4be4-9437-7496c028a1de', 'amz-sdk-request': b'attempt=1'}>
+DEBUG:botocore.httpsession:Certificate path: /usr/local/lib/python3.12/site-packages/certifi/cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): flytta-email-input.s3.eu-west-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://flytta-email-input.s3.eu-west-1.amazonaws.com:443 "GET /casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1 HTTP/1.1" 200 655327
+DEBUG:botocore.parsers:Response headers: {'x-amz-id-2': '14pjxAFA/jk/hoFBhFviSV/pL0nOLUv9Se/d6GyiPjCEjHXqeBrkL4zHOHR8S5vV5kKuwxvL4wc=', 'x-amz-request-id': 'S9J594JDQ3JEFFSS', 'Date': 'Wed, 29 May 2024 15:07:31 GMT', 'Last-Modified': 'Fri, 03 May 2024 03:22:31 GMT', 'ETag': '"b83aa2789df4f74db19b9668cb96fbc7"', 'x-amz-server-side-encryption': 'AES256', 'Accept-Ranges': 'bytes', 'Content-Type': 'application/octet-stream', 'Server': 'AmazonS3', 'Content-Length': '655327'}
+DEBUG:botocore.parsers:Response body:
+<botocore.response.StreamingBody object at 0x7f4f0cee8220>
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <botocore.retryhandler.RetryHandler object at 0x7f4f0cedeb70>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x7f4f0ceddf10>>
+DEBUG:multipart.multipart:Calling on_field_start with no data
+DEBUG:multipart.multipart:Calling on_field_name with data[0:11]
+DEBUG:multipart.multipart:Calling on_field_data with data[12:116]
+DEBUG:multipart.multipart:Calling on_field_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7f4f107fc860>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x7f4f1094d800>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x7f4f1027d9e0>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x7f4f1094d580>
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: environment_service
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: environment_global
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: config_service
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: config_global
+DEBUG:botocore.configprovider:No configured endpoint found.
+DEBUG:botocore.endpoint:Setting s3 timeout as (60, 60)
+DEBUG:botocore.client:Registering retry handlers for service: s3
+DEBUG:botocore.utils:Registering S3 region redirector handler
+DEBUG:botocore.utils:Registering S3Express Identity Resolver
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function sse_md5 at 0x7f4f107fe520>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function validate_bucket_name at 0x7f4f107fe480>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x7f4f10818680>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x7f4f0d1f6c30>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x7f4f0cebf2c0>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function generate_idempotent_uuid at 0x7f4f107fe2a0>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x7f4f10818860>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x7f4f0d1f6c30>>
+DEBUG:botocore.regions:Calling endpoint provider with parameters: {'Bucket': 'flytta-email-input', 'Region': 'eu-west-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+DEBUG:botocore.regions:Endpoint provider result: https://flytta-email-input.s3.eu-west-1.amazonaws.com
+DEBUG:botocore.regions:Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+DEBUG:botocore.regions:Selected auth type "v4" as "v4" with signing context params: {'region': 'eu-west-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_expect_header at 0x7f4f107fe840>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x7f4f0cf00e90>>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_recursion_detection_header at 0x7f4f107fd760>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function inject_api_version_header_if_needed at 0x7f4f107ffd80>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=GetObject) with params: {'url_path': '/casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1', 'query_string': {}, 'method': 'GET', 'headers': {'User-Agent': 'Boto3/1.34.114 md/Botocore#1.34.114 ua/2.0 os/linux#5.15.146.1-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.12.3 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.114'}, 'body': b'', 'auth_path': '/flytta-email-input/casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1', 'url': 'https://flytta-email-input.s3.eu-west-1.amazonaws.com/casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1', 'context': {'client_region': 'eu-west-1', 'client_config': <botocore.config.Config object at 0x7f4f0cedc920>, 'has_streaming_input': False, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'flytta-email-input', 'params': {'Bucket': 'flytta-email-input', 'Key': 'casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1'}}, 'input_params': {'Bucket': 'flytta-email-input', 'Key': 'casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1'}, 'signing': {'region': 'eu-west-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'eu-west-1'}]}}}
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f4f0cedc800>>
+DEBUG:botocore.hooks:Event choose-signer.s3.GetObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x7f4f0cebf2c0>>
+DEBUG:botocore.hooks:Event choose-signer.s3.GetObject: calling handler <function set_operation_specific_signer at 0x7f4f107fe160>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <function remove_arn_from_signing_path at 0x7f4f108187c0>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x7f4f0cf00e90>>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+GET
+/casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1
+
+host:flytta-email-input.s3.eu-west-1.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20240529T151115Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20240529T151115Z
+20240529/eu-west-1/s3/aws4_request
+ab63a40b90563513f92b1bf91ae2fcf99eaadc73a2273c0787e3205bd7cda4fe
+DEBUG:botocore.auth:Signature:
+82463dc3fcc36d8d7fb5c69180a2d4f70fe54a67c2826265f07531a411cc73d2
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <function add_retry_headers at 0x7f4f108185e0>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=True, method=GET, url=https://flytta-email-input.s3.eu-west-1.amazonaws.com/casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1, headers={'User-Agent': b'Boto3/1.34.114 md/Botocore#1.34.114 ua/2.0 os/linux#5.15.146.1-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.12.3 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.114', 'X-Amz-Date': b'20240529T151115Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA47CR267TIKQ7F5W5/20240529/eu-west-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=82463dc3fcc36d8d7fb5c69180a2d4f70fe54a67c2826265f07531a411cc73d2', 'amz-sdk-invocation-id': b'ff9fc2ab-0ced-40c8-a116-49bc383fae7b', 'amz-sdk-request': b'attempt=1'}>
+DEBUG:botocore.httpsession:Certificate path: /usr/local/lib/python3.12/site-packages/certifi/cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): flytta-email-input.s3.eu-west-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://flytta-email-input.s3.eu-west-1.amazonaws.com:443 "GET /casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1 HTTP/1.1" 200 655327
+DEBUG:botocore.parsers:Response headers: {'x-amz-id-2': 'rvGs7hDXdZvNUDVOfmYLNzr3a/p1nIA66RGL2nHXh2+ahKXBTnvGpXyD5cfGp9JysT5J9t6F4lmLa8UfqHKGGQ==', 'x-amz-request-id': 'P9EZWA850H33WDY1', 'Date': 'Wed, 29 May 2024 15:11:16 GMT', 'Last-Modified': 'Fri, 03 May 2024 03:22:31 GMT', 'ETag': '"b83aa2789df4f74db19b9668cb96fbc7"', 'x-amz-server-side-encryption': 'AES256', 'Accept-Ranges': 'bytes', 'Content-Type': 'application/octet-stream', 'Server': 'AmazonS3', 'Content-Length': '655327'}
+DEBUG:botocore.parsers:Response body:
+<botocore.response.StreamingBody object at 0x7f4f0cf023e0>
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <botocore.retryhandler.RetryHandler object at 0x7f4f0cf00e00>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x7f4f0d1f6c30>>
+DEBUG:multipart.multipart:Calling on_field_start with no data
+DEBUG:multipart.multipart:Calling on_field_name with data[0:11]
+DEBUG:multipart.multipart:Calling on_field_data with data[12:116]
+DEBUG:multipart.multipart:Calling on_field_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:botocore.hooks:Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG:botocore.hooks:Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG:botocore.hooks:Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG:botocore.hooks:Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG:botocore.hooks:Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG:botocore.utils:IMDS ENDPOINT: http://169.254.169.254/
+DEBUG:botocore.credentials:Looking for credentials via: env
+DEBUG:botocore.credentials:Looking for credentials via: assume-role
+DEBUG:botocore.credentials:Looking for credentials via: assume-role-with-web-identity
+DEBUG:botocore.credentials:Looking for credentials via: sso
+DEBUG:botocore.credentials:Looking for credentials via: shared-credentials-file
+INFO:botocore.credentials:Found credentials in shared credentials file: ~/.aws/credentials
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/endpoints.json
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/sdk-default-configuration.json
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7f7e90728860>
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/s3/2006-03-01/service-2.json.gz
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/s3/2006-03-01/endpoint-rule-set-1.json.gz
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/partitions.json
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x7f7e90879800>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x7f7e901a99e0>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x7f7e90879580>
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: environment_service
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: environment_global
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: config_service
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: config_global
+DEBUG:botocore.configprovider:No configured endpoint found.
+DEBUG:botocore.endpoint:Setting s3 timeout as (60, 60)
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/_retry.json
+DEBUG:botocore.client:Registering retry handlers for service: s3
+DEBUG:botocore.utils:Registering S3 region redirector handler
+DEBUG:botocore.utils:Registering S3Express Identity Resolver
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function sse_md5 at 0x7f7e9072a520>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function validate_bucket_name at 0x7f7e9072a480>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x7f7e90744680>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x7f7e902dda90>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x7f7e905e8f20>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function generate_idempotent_uuid at 0x7f7e9072a2a0>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x7f7e90744860>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x7f7e902dda90>>
+DEBUG:botocore.regions:Calling endpoint provider with parameters: {'Bucket': 'flytta-email-input', 'Region': 'eu-west-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+DEBUG:botocore.regions:Endpoint provider result: https://flytta-email-input.s3.eu-west-1.amazonaws.com
+DEBUG:botocore.regions:Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+DEBUG:botocore.regions:Selected auth type "v4" as "v4" with signing context params: {'region': 'eu-west-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_expect_header at 0x7f7e9072a840>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x7f7e8cd84c20>>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_recursion_detection_header at 0x7f7e90729760>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function inject_api_version_header_if_needed at 0x7f7e9072bd80>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=GetObject) with params: {'url_path': '/casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1', 'query_string': {}, 'method': 'GET', 'headers': {'User-Agent': 'Boto3/1.34.114 md/Botocore#1.34.114 ua/2.0 os/linux#5.15.146.1-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.12.3 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.114'}, 'body': b'', 'auth_path': '/flytta-email-input/casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1', 'url': 'https://flytta-email-input.s3.eu-west-1.amazonaws.com/casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1', 'context': {'client_region': 'eu-west-1', 'client_config': <botocore.config.Config object at 0x7f7e8d126510>, 'has_streaming_input': False, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'flytta-email-input', 'params': {'Bucket': 'flytta-email-input', 'Key': 'casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1'}}, 'input_params': {'Bucket': 'flytta-email-input', 'Key': 'casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1'}, 'signing': {'region': 'eu-west-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'eu-west-1'}]}}}
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f7e8d1267b0>>
+DEBUG:botocore.hooks:Event choose-signer.s3.GetObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x7f7e905e8f20>>
+DEBUG:botocore.hooks:Event choose-signer.s3.GetObject: calling handler <function set_operation_specific_signer at 0x7f7e9072a160>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <function remove_arn_from_signing_path at 0x7f7e907447c0>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x7f7e8cd84c20>>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+GET
+/casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1
+
+host:flytta-email-input.s3.eu-west-1.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20240529T151158Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20240529T151158Z
+20240529/eu-west-1/s3/aws4_request
+bf84d64804ca80a794c588ee22bef4dcc9b4cfd46f98f26c8fd39271b5651f64
+DEBUG:botocore.auth:Signature:
+da1132990664333da087d5434e3a7314469d87604b0e428b95912fd75114f939
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <function add_retry_headers at 0x7f7e907445e0>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=True, method=GET, url=https://flytta-email-input.s3.eu-west-1.amazonaws.com/casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1, headers={'User-Agent': b'Boto3/1.34.114 md/Botocore#1.34.114 ua/2.0 os/linux#5.15.146.1-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.12.3 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.114', 'X-Amz-Date': b'20240529T151158Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA47CR267TIKQ7F5W5/20240529/eu-west-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=da1132990664333da087d5434e3a7314469d87604b0e428b95912fd75114f939', 'amz-sdk-invocation-id': b'2b771804-1e43-4c33-b987-97456c4d1994', 'amz-sdk-request': b'attempt=1'}>
+DEBUG:botocore.httpsession:Certificate path: /usr/local/lib/python3.12/site-packages/certifi/cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): flytta-email-input.s3.eu-west-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://flytta-email-input.s3.eu-west-1.amazonaws.com:443 "GET /casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1 HTTP/1.1" 200 655327
+DEBUG:botocore.parsers:Response headers: {'x-amz-id-2': 'fm/OVgdBCOFcWIV6DvagY/a4jHHmU2RmHQa9u9BykJJgB62cc0zsoS+lYZqWJFYRDqjpBDI+xLDYLBqBAJqcdw==', 'x-amz-request-id': 'RZT5B3FG7S8ZZ908', 'Date': 'Wed, 29 May 2024 15:12:00 GMT', 'Last-Modified': 'Fri, 03 May 2024 03:22:31 GMT', 'ETag': '"b83aa2789df4f74db19b9668cb96fbc7"', 'x-amz-server-side-encryption': 'AES256', 'Accept-Ranges': 'bytes', 'Content-Type': 'application/octet-stream', 'Server': 'AmazonS3', 'Content-Length': '655327'}
+DEBUG:botocore.parsers:Response body:
+<botocore.response.StreamingBody object at 0x7f7e8cd875e0>
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <botocore.retryhandler.RetryHandler object at 0x7f7e8cd84bc0>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x7f7e902dda90>>
+DEBUG:multipart.multipart:Calling on_field_start with no data
+DEBUG:multipart.multipart:Calling on_field_name with data[0:11]
+DEBUG:multipart.multipart:Calling on_field_data with data[12:116]
+DEBUG:multipart.multipart:Calling on_field_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:botocore.hooks:Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG:botocore.hooks:Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG:botocore.hooks:Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG:botocore.hooks:Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG:botocore.hooks:Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG:botocore.utils:IMDS ENDPOINT: http://169.254.169.254/
+DEBUG:botocore.credentials:Looking for credentials via: env
+DEBUG:botocore.credentials:Looking for credentials via: assume-role
+DEBUG:botocore.credentials:Looking for credentials via: assume-role-with-web-identity
+DEBUG:botocore.credentials:Looking for credentials via: sso
+DEBUG:botocore.credentials:Looking for credentials via: shared-credentials-file
+INFO:botocore.credentials:Found credentials in shared credentials file: ~/.aws/credentials
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/endpoints.json
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/sdk-default-configuration.json
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7f7daa37c860>
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/s3/2006-03-01/service-2.json.gz
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/s3/2006-03-01/endpoint-rule-set-1.json.gz
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/partitions.json
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x7f7daa4c9800>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x7f7da9e099e0>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x7f7daa4c9580>
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: environment_service
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: environment_global
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: config_service
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: config_global
+DEBUG:botocore.configprovider:No configured endpoint found.
+DEBUG:botocore.endpoint:Setting s3 timeout as (60, 60)
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/_retry.json
+DEBUG:botocore.client:Registering retry handlers for service: s3
+DEBUG:botocore.utils:Registering S3 region redirector handler
+DEBUG:botocore.utils:Registering S3Express Identity Resolver
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function sse_md5 at 0x7f7daa37e520>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function validate_bucket_name at 0x7f7daa37e480>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x7f7daa398680>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x7f7d9ab322d0>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x7f7d9aea5df0>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function generate_idempotent_uuid at 0x7f7daa37e2a0>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x7f7daa398860>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x7f7d9ab322d0>>
+DEBUG:botocore.regions:Calling endpoint provider with parameters: {'Bucket': 'flytta-email-input', 'Region': 'eu-west-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+DEBUG:botocore.regions:Endpoint provider result: https://flytta-email-input.s3.eu-west-1.amazonaws.com
+DEBUG:botocore.regions:Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+DEBUG:botocore.regions:Selected auth type "v4" as "v4" with signing context params: {'region': 'eu-west-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_expect_header at 0x7f7daa37e840>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x7f7d9aa24a70>>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_recursion_detection_header at 0x7f7daa37d760>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function inject_api_version_header_if_needed at 0x7f7daa37fd80>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=GetObject) with params: {'url_path': '/casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1', 'query_string': {}, 'method': 'GET', 'headers': {'User-Agent': 'Boto3/1.34.114 md/Botocore#1.34.114 ua/2.0 os/linux#5.15.146.1-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.12.3 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.114'}, 'body': b'', 'auth_path': '/flytta-email-input/casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1', 'url': 'https://flytta-email-input.s3.eu-west-1.amazonaws.com/casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1', 'context': {'client_region': 'eu-west-1', 'client_config': <botocore.config.Config object at 0x7f7d9abd68d0>, 'has_streaming_input': False, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'flytta-email-input', 'params': {'Bucket': 'flytta-email-input', 'Key': 'casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1'}}, 'input_params': {'Bucket': 'flytta-email-input', 'Key': 'casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1'}, 'signing': {'region': 'eu-west-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'eu-west-1'}]}}}
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f7d9abd64e0>>
+DEBUG:botocore.hooks:Event choose-signer.s3.GetObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x7f7d9aea5df0>>
+DEBUG:botocore.hooks:Event choose-signer.s3.GetObject: calling handler <function set_operation_specific_signer at 0x7f7daa37e160>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <function remove_arn_from_signing_path at 0x7f7daa3987c0>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x7f7d9aa24a70>>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+GET
+/casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1
+
+host:flytta-email-input.s3.eu-west-1.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20240529T151208Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20240529T151208Z
+20240529/eu-west-1/s3/aws4_request
+95738f05a4e67f5726314002b396892f93aa19a94e0f9601529c41f7df39fc88
+DEBUG:botocore.auth:Signature:
+fb3c527da1f685cb3bc99502485444ba068a8a0df9b987e7097e6d1082d8a810
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <function add_retry_headers at 0x7f7daa3985e0>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=True, method=GET, url=https://flytta-email-input.s3.eu-west-1.amazonaws.com/casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1, headers={'User-Agent': b'Boto3/1.34.114 md/Botocore#1.34.114 ua/2.0 os/linux#5.15.146.1-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.12.3 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.114', 'X-Amz-Date': b'20240529T151208Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA47CR267TIKQ7F5W5/20240529/eu-west-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=fb3c527da1f685cb3bc99502485444ba068a8a0df9b987e7097e6d1082d8a810', 'amz-sdk-invocation-id': b'7a04866f-b63f-419d-b8e3-6243163e3d12', 'amz-sdk-request': b'attempt=1'}>
+DEBUG:botocore.httpsession:Certificate path: /usr/local/lib/python3.12/site-packages/certifi/cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): flytta-email-input.s3.eu-west-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://flytta-email-input.s3.eu-west-1.amazonaws.com:443 "GET /casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1 HTTP/1.1" 200 655327
+DEBUG:botocore.parsers:Response headers: {'x-amz-id-2': 't5086SiYy/1VGOtbI2KAYVJ+UyO5FYSM0iRF+RC/573aQ34ST+Gxs+OGqU2qNoSNARJIgIaMWJYPB7UxM+U8Ua20ofSryKDt', 'x-amz-request-id': '5H629WMS1XNH0K6V', 'Date': 'Wed, 29 May 2024 15:12:09 GMT', 'Last-Modified': 'Fri, 03 May 2024 03:22:31 GMT', 'ETag': '"b83aa2789df4f74db19b9668cb96fbc7"', 'x-amz-server-side-encryption': 'AES256', 'Accept-Ranges': 'bytes', 'Content-Type': 'application/octet-stream', 'Server': 'AmazonS3', 'Content-Length': '655327'}
+DEBUG:botocore.parsers:Response body:
+<botocore.response.StreamingBody object at 0x7f7d9aa276d0>
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <botocore.retryhandler.RetryHandler object at 0x7f7d9aa249e0>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x7f7d9ab322d0>>
+DEBUG:multipart.multipart:Calling on_field_start with no data
+DEBUG:multipart.multipart:Calling on_field_name with data[0:11]
+DEBUG:multipart.multipart:Calling on_field_data with data[12:116]
+DEBUG:multipart.multipart:Calling on_field_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7f7daa37c860>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x7f7daa4c9800>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x7f7da9e099e0>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x7f7daa4c9580>
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: environment_service
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: environment_global
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: config_service
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: config_global
+DEBUG:botocore.configprovider:No configured endpoint found.
+DEBUG:botocore.endpoint:Setting s3 timeout as (60, 60)
+DEBUG:botocore.client:Registering retry handlers for service: s3
+DEBUG:botocore.utils:Registering S3 region redirector handler
+DEBUG:botocore.utils:Registering S3Express Identity Resolver
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function sse_md5 at 0x7f7daa37e520>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function validate_bucket_name at 0x7f7daa37e480>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x7f7daa398680>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x7f7d9acabf20>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x7f7d9acde630>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function generate_idempotent_uuid at 0x7f7daa37e2a0>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x7f7daa398860>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x7f7d9acabf20>>
+DEBUG:botocore.regions:Calling endpoint provider with parameters: {'Bucket': 'flytta-email-input', 'Region': 'eu-west-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+DEBUG:botocore.regions:Endpoint provider result: https://flytta-email-input.s3.eu-west-1.amazonaws.com
+DEBUG:botocore.regions:Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+DEBUG:botocore.regions:Selected auth type "v4" as "v4" with signing context params: {'region': 'eu-west-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_expect_header at 0x7f7daa37e840>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x7f7d9aa9e690>>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_recursion_detection_header at 0x7f7daa37d760>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function inject_api_version_header_if_needed at 0x7f7daa37fd80>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=GetObject) with params: {'url_path': '/casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1', 'query_string': {}, 'method': 'GET', 'headers': {'User-Agent': 'Boto3/1.34.114 md/Botocore#1.34.114 ua/2.0 os/linux#5.15.146.1-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.12.3 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.114'}, 'body': b'', 'auth_path': '/flytta-email-input/casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1', 'url': 'https://flytta-email-input.s3.eu-west-1.amazonaws.com/casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1', 'context': {'client_region': 'eu-west-1', 'client_config': <botocore.config.Config object at 0x7f7d9acabfe0>, 'has_streaming_input': False, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'flytta-email-input', 'params': {'Bucket': 'flytta-email-input', 'Key': 'casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1'}}, 'input_params': {'Bucket': 'flytta-email-input', 'Key': 'casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1'}, 'signing': {'region': 'eu-west-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'eu-west-1'}]}}}
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f7daa7b1460>>
+DEBUG:botocore.hooks:Event choose-signer.s3.GetObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x7f7d9acde630>>
+DEBUG:botocore.hooks:Event choose-signer.s3.GetObject: calling handler <function set_operation_specific_signer at 0x7f7daa37e160>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <function remove_arn_from_signing_path at 0x7f7daa3987c0>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x7f7d9aa9e690>>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+GET
+/casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1
+
+host:flytta-email-input.s3.eu-west-1.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20240529T151301Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20240529T151301Z
+20240529/eu-west-1/s3/aws4_request
+6fde5e76dc7f0dd30917731490c9464db6343427b2ba67c6a63a3ce3b8f6ce95
+DEBUG:botocore.auth:Signature:
+4329554c3caec75c7156b4aae3d9244235568ea801b48949140efd321b39f13a
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <function add_retry_headers at 0x7f7daa3985e0>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=True, method=GET, url=https://flytta-email-input.s3.eu-west-1.amazonaws.com/casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1, headers={'User-Agent': b'Boto3/1.34.114 md/Botocore#1.34.114 ua/2.0 os/linux#5.15.146.1-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.12.3 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.114', 'X-Amz-Date': b'20240529T151301Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA47CR267TIKQ7F5W5/20240529/eu-west-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=4329554c3caec75c7156b4aae3d9244235568ea801b48949140efd321b39f13a', 'amz-sdk-invocation-id': b'9584f620-7579-46ac-8d57-38fb894d3e44', 'amz-sdk-request': b'attempt=1'}>
+DEBUG:botocore.httpsession:Certificate path: /usr/local/lib/python3.12/site-packages/certifi/cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): flytta-email-input.s3.eu-west-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://flytta-email-input.s3.eu-west-1.amazonaws.com:443 "GET /casper.GVMS.email/spizarnia/09o5kamhpopilk0frbtmjodl73cmlmbbu2cgido1 HTTP/1.1" 200 655327
+DEBUG:botocore.parsers:Response headers: {'x-amz-id-2': '8VMm5L01LSbAedPbRd6A8mDSYaXsFBD7/QtiQ4fo5XQ+C7rlu9nRewTfwMv2gR9F+lLARmWRwHQxQMd5K2Htjw==', 'x-amz-request-id': 'XYQDJKS4B3H81QFG', 'Date': 'Wed, 29 May 2024 15:13:02 GMT', 'Last-Modified': 'Fri, 03 May 2024 03:22:31 GMT', 'ETag': '"b83aa2789df4f74db19b9668cb96fbc7"', 'x-amz-server-side-encryption': 'AES256', 'Accept-Ranges': 'bytes', 'Content-Type': 'application/octet-stream', 'Server': 'AmazonS3', 'Content-Length': '655327'}
+DEBUG:botocore.parsers:Response body:
+<botocore.response.StreamingBody object at 0x7f7d9aa9fd30>
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <botocore.retryhandler.RetryHandler object at 0x7f7d9aa9e600>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x7f7d9acabf20>>
+DEBUG:multipart.multipart:Calling on_field_start with no data
+DEBUG:multipart.multipart:Calling on_field_name with data[0:11]
+DEBUG:multipart.multipart:Calling on_field_data with data[12:55]
+DEBUG:multipart.multipart:Calling on_field_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7f7daa37c860>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x7f7daa4c9800>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x7f7da9e099e0>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x7f7daa4c9580>
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: environment_service
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: environment_global
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: config_service
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: config_global
+DEBUG:botocore.configprovider:No configured endpoint found.
+DEBUG:botocore.endpoint:Setting s3 timeout as (60, 60)
+DEBUG:botocore.client:Registering retry handlers for service: s3
+DEBUG:botocore.utils:Registering S3 region redirector handler
+DEBUG:botocore.utils:Registering S3Express Identity Resolver
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function sse_md5 at 0x7f7daa37e520>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function validate_bucket_name at 0x7f7daa37e480>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x7f7daa398680>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x7f7d9aa254f0>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x7f7d9aa01bb0>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function generate_idempotent_uuid at 0x7f7daa37e2a0>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x7f7daa398860>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x7f7d9aa254f0>>
+DEBUG:botocore.regions:Calling endpoint provider with parameters: {'Bucket': 'flytta-files-input', 'Region': 'eu-west-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'JobIDs.json', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+DEBUG:botocore.regions:Endpoint provider result: https://flytta-files-input.s3.eu-west-1.amazonaws.com
+DEBUG:botocore.regions:Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+DEBUG:botocore.regions:Selected auth type "v4" as "v4" with signing context params: {'region': 'eu-west-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_expect_header at 0x7f7daa37e840>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x7f7d9aac8410>>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_recursion_detection_header at 0x7f7daa37d760>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function inject_api_version_header_if_needed at 0x7f7daa37fd80>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=GetObject) with params: {'url_path': '/JobIDs.json', 'query_string': {}, 'method': 'GET', 'headers': {'User-Agent': 'Boto3/1.34.114 md/Botocore#1.34.114 ua/2.0 os/linux#5.15.146.1-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.12.3 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.114'}, 'body': b'', 'auth_path': '/flytta-files-input/JobIDs.json', 'url': 'https://flytta-files-input.s3.eu-west-1.amazonaws.com/JobIDs.json', 'context': {'client_region': 'eu-west-1', 'client_config': <botocore.config.Config object at 0x7f7d9aa9f980>, 'has_streaming_input': False, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'flytta-files-input', 'params': {'Bucket': 'flytta-files-input', 'Key': 'JobIDs.json'}}, 'input_params': {'Bucket': 'flytta-files-input', 'Key': 'JobIDs.json'}, 'signing': {'region': 'eu-west-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'eu-west-1'}]}}}
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f7d9aa9f950>>
+DEBUG:botocore.hooks:Event choose-signer.s3.GetObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x7f7d9aa01bb0>>
+DEBUG:botocore.hooks:Event choose-signer.s3.GetObject: calling handler <function set_operation_specific_signer at 0x7f7daa37e160>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <function remove_arn_from_signing_path at 0x7f7daa3987c0>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x7f7d9aac8410>>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+GET
+/JobIDs.json
+
+host:flytta-files-input.s3.eu-west-1.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20240529T151343Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20240529T151343Z
+20240529/eu-west-1/s3/aws4_request
+5691cd10788e4845f41763657c2870ce343a6ef078c66e3a8c55a4dd42a88c04
+DEBUG:botocore.auth:Signature:
+26bc39976a97568e60e6c2d9b68f78cc5c0b6900df4115a89add75799989658e
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <function add_retry_headers at 0x7f7daa3985e0>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=True, method=GET, url=https://flytta-files-input.s3.eu-west-1.amazonaws.com/JobIDs.json, headers={'User-Agent': b'Boto3/1.34.114 md/Botocore#1.34.114 ua/2.0 os/linux#5.15.146.1-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.12.3 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.114', 'X-Amz-Date': b'20240529T151343Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA47CR267TIKQ7F5W5/20240529/eu-west-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=26bc39976a97568e60e6c2d9b68f78cc5c0b6900df4115a89add75799989658e', 'amz-sdk-invocation-id': b'dee22145-b45c-4b4e-a427-6ddbd7dca5a4', 'amz-sdk-request': b'attempt=1'}>
+DEBUG:botocore.httpsession:Certificate path: /usr/local/lib/python3.12/site-packages/certifi/cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): flytta-files-input.s3.eu-west-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://flytta-files-input.s3.eu-west-1.amazonaws.com:443 "GET /JobIDs.json HTTP/1.1" 200 17884
+DEBUG:botocore.parsers:Response headers: {'x-amz-id-2': 'dFfypmXw5DihA/Dj+wzCDM9V35oeZp6OYcY1+iSCHJC7ec9GX6fkUbRNVD1+V2bydJtyPpQq1mM=', 'x-amz-request-id': 'Y031HV8FM1BNW2V2', 'Date': 'Wed, 29 May 2024 15:13:44 GMT', 'Last-Modified': 'Wed, 29 May 2024 11:51:50 GMT', 'ETag': '"444353ce1d0fcf9ecd757e8296efab53"', 'x-amz-server-side-encryption': 'AES256', 'Accept-Ranges': 'bytes', 'Content-Type': 'binary/octet-stream', 'Server': 'AmazonS3', 'Content-Length': '17884'}
+DEBUG:botocore.parsers:Response body:
+<botocore.response.StreamingBody object at 0x7f7d9aac9c90>
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <botocore.retryhandler.RetryHandler object at 0x7f7d9aac8380>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x7f7d9aa254f0>>
+DEBUG:multipart.multipart:Calling on_field_start with no data
+DEBUG:multipart.multipart:Calling on_field_name with data[0:11]
+DEBUG:multipart.multipart:Calling on_field_data with data[12:55]
+DEBUG:multipart.multipart:Calling on_field_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:botocore.hooks:Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG:botocore.hooks:Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG:botocore.hooks:Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG:botocore.hooks:Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG:botocore.hooks:Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG:botocore.utils:IMDS ENDPOINT: http://169.254.169.254/
+DEBUG:botocore.credentials:Looking for credentials via: env
+DEBUG:botocore.credentials:Looking for credentials via: assume-role
+DEBUG:botocore.credentials:Looking for credentials via: assume-role-with-web-identity
+DEBUG:botocore.credentials:Looking for credentials via: sso
+DEBUG:botocore.credentials:Looking for credentials via: shared-credentials-file
+INFO:botocore.credentials:Found credentials in shared credentials file: ~/.aws/credentials
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/endpoints.json
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/sdk-default-configuration.json
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7f6408890860>
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/s3/2006-03-01/service-2.json.gz
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/s3/2006-03-01/endpoint-rule-set-1.json.gz
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/partitions.json
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x7f64089dd800>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x7f640831d9e0>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x7f64089dd580>
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: environment_service
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: environment_global
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: config_service
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: config_global
+DEBUG:botocore.configprovider:No configured endpoint found.
+DEBUG:botocore.endpoint:Setting s3 timeout as (60, 60)
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/_retry.json
+DEBUG:botocore.client:Registering retry handlers for service: s3
+DEBUG:botocore.utils:Registering S3 region redirector handler
+DEBUG:botocore.utils:Registering S3Express Identity Resolver
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function sse_md5 at 0x7f6408892520>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function validate_bucket_name at 0x7f6408892480>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x7f64088ac680>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x7f640522f200>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x7f6405459d00>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function generate_idempotent_uuid at 0x7f64088922a0>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x7f64088ac860>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x7f640522f200>>
+DEBUG:botocore.regions:Calling endpoint provider with parameters: {'Bucket': 'flytta-files-input', 'Region': 'eu-west-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'JobIDs.json', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+DEBUG:botocore.regions:Endpoint provider result: https://flytta-files-input.s3.eu-west-1.amazonaws.com
+DEBUG:botocore.regions:Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+DEBUG:botocore.regions:Selected auth type "v4" as "v4" with signing context params: {'region': 'eu-west-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_expect_header at 0x7f6408892840>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x7f64052c0c50>>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_recursion_detection_header at 0x7f6408891760>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function inject_api_version_header_if_needed at 0x7f6408893d80>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=GetObject) with params: {'url_path': '/JobIDs.json', 'query_string': {}, 'method': 'GET', 'headers': {'User-Agent': 'Boto3/1.34.114 md/Botocore#1.34.114 ua/2.0 os/linux#5.15.146.1-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.12.3 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.114'}, 'body': b'', 'auth_path': '/flytta-files-input/JobIDs.json', 'url': 'https://flytta-files-input.s3.eu-west-1.amazonaws.com/JobIDs.json', 'context': {'client_region': 'eu-west-1', 'client_config': <botocore.config.Config object at 0x7f64082b73b0>, 'has_streaming_input': False, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'flytta-files-input', 'params': {'Bucket': 'flytta-files-input', 'Key': 'JobIDs.json'}}, 'input_params': {'Bucket': 'flytta-files-input', 'Key': 'JobIDs.json'}, 'signing': {'region': 'eu-west-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'eu-west-1'}]}}}
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f64052767e0>>
+DEBUG:botocore.hooks:Event choose-signer.s3.GetObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x7f6405459d00>>
+DEBUG:botocore.hooks:Event choose-signer.s3.GetObject: calling handler <function set_operation_specific_signer at 0x7f6408892160>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <function remove_arn_from_signing_path at 0x7f64088ac7c0>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x7f64052c0c50>>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+GET
+/JobIDs.json
+
+host:flytta-files-input.s3.eu-west-1.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20240529T151509Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20240529T151509Z
+20240529/eu-west-1/s3/aws4_request
+eed57e96537349e25ff3a70ec414c66095e77ac92d21b2f90a59af7bc301bf58
+DEBUG:botocore.auth:Signature:
+f558d592eeae1a02566089247182603cce155e4c9b0301de8263fd84a3ccc9f7
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <function add_retry_headers at 0x7f64088ac5e0>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=True, method=GET, url=https://flytta-files-input.s3.eu-west-1.amazonaws.com/JobIDs.json, headers={'User-Agent': b'Boto3/1.34.114 md/Botocore#1.34.114 ua/2.0 os/linux#5.15.146.1-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.12.3 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.114', 'X-Amz-Date': b'20240529T151509Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA47CR267TIKQ7F5W5/20240529/eu-west-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=f558d592eeae1a02566089247182603cce155e4c9b0301de8263fd84a3ccc9f7', 'amz-sdk-invocation-id': b'd0be2dcc-589a-4e6c-bb16-976973dc6dd1', 'amz-sdk-request': b'attempt=1'}>
+DEBUG:botocore.httpsession:Certificate path: /usr/local/lib/python3.12/site-packages/certifi/cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): flytta-files-input.s3.eu-west-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://flytta-files-input.s3.eu-west-1.amazonaws.com:443 "GET /JobIDs.json HTTP/1.1" 200 17884
+DEBUG:botocore.parsers:Response headers: {'x-amz-id-2': '4fRQC63uLx8ALnGd2JbXQd/w/GqAmZImkVRszhBVd2U2iWnmsZLkETNCoBIaKgNnd/zMNoUMAs3Fj+zxYj5WQQ==', 'x-amz-request-id': 'T20C3JT3C2JCAETT', 'Date': 'Wed, 29 May 2024 15:15:11 GMT', 'Last-Modified': 'Wed, 29 May 2024 11:51:50 GMT', 'ETag': '"444353ce1d0fcf9ecd757e8296efab53"', 'x-amz-server-side-encryption': 'AES256', 'Accept-Ranges': 'bytes', 'Content-Type': 'binary/octet-stream', 'Server': 'AmazonS3', 'Content-Length': '17884'}
+DEBUG:botocore.parsers:Response body:
+<botocore.response.StreamingBody object at 0x7f64052c3880>
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <botocore.retryhandler.RetryHandler object at 0x7f64052c0b60>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x7f640522f200>>
+DEBUG:multipart.multipart:Calling on_field_start with no data
+DEBUG:multipart.multipart:Calling on_field_name with data[0:11]
+DEBUG:multipart.multipart:Calling on_field_data with data[12:55]
+DEBUG:multipart.multipart:Calling on_field_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:botocore.hooks:Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG:botocore.hooks:Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG:botocore.hooks:Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG:botocore.hooks:Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG:botocore.hooks:Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG:botocore.utils:IMDS ENDPOINT: http://169.254.169.254/
+DEBUG:botocore.credentials:Looking for credentials via: env
+DEBUG:botocore.credentials:Looking for credentials via: assume-role
+DEBUG:botocore.credentials:Looking for credentials via: assume-role-with-web-identity
+DEBUG:botocore.credentials:Looking for credentials via: sso
+DEBUG:botocore.credentials:Looking for credentials via: shared-credentials-file
+INFO:botocore.credentials:Found credentials in shared credentials file: ~/.aws/credentials
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/endpoints.json
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/sdk-default-configuration.json
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7fda9a010860>
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/s3/2006-03-01/service-2.json.gz
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/s3/2006-03-01/endpoint-rule-set-1.json.gz
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/partitions.json
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x7fda9a15d800>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x7fda99a8d9e0>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x7fda9a15d580>
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: environment_service
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: environment_global
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: config_service
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: config_global
+DEBUG:botocore.configprovider:No configured endpoint found.
+DEBUG:botocore.endpoint:Setting s3 timeout as (60, 60)
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/_retry.json
+DEBUG:botocore.client:Registering retry handlers for service: s3
+DEBUG:botocore.utils:Registering S3 region redirector handler
+DEBUG:botocore.utils:Registering S3Express Identity Resolver
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function sse_md5 at 0x7fda9a012520>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function validate_bucket_name at 0x7fda9a012480>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x7fda9a02c680>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x7fda8a644500>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x7fda8abcdb80>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function generate_idempotent_uuid at 0x7fda9a0122a0>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x7fda9a02c860>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x7fda8a644500>>
+DEBUG:botocore.regions:Calling endpoint provider with parameters: {'Bucket': 'flytta-files-input', 'Region': 'eu-west-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'JobIDs.json', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+DEBUG:botocore.regions:Endpoint provider result: https://flytta-files-input.s3.eu-west-1.amazonaws.com
+DEBUG:botocore.regions:Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+DEBUG:botocore.regions:Selected auth type "v4" as "v4" with signing context params: {'region': 'eu-west-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_expect_header at 0x7fda9a012840>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x7fda8a644b60>>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_recursion_detection_header at 0x7fda9a011760>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function inject_api_version_header_if_needed at 0x7fda9a013d80>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=GetObject) with params: {'url_path': '/JobIDs.json', 'query_string': {}, 'method': 'GET', 'headers': {'User-Agent': 'Boto3/1.34.114 md/Botocore#1.34.114 ua/2.0 os/linux#5.15.146.1-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.12.3 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.114'}, 'body': b'', 'auth_path': '/flytta-files-input/JobIDs.json', 'url': 'https://flytta-files-input.s3.eu-west-1.amazonaws.com/JobIDs.json', 'context': {'client_region': 'eu-west-1', 'client_config': <botocore.config.Config object at 0x7fda8a7fa5d0>, 'has_streaming_input': False, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'flytta-files-input', 'params': {'Bucket': 'flytta-files-input', 'Key': 'JobIDs.json'}}, 'input_params': {'Bucket': 'flytta-files-input', 'Key': 'JobIDs.json'}, 'signing': {'region': 'eu-west-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'eu-west-1'}]}}}
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7fda8a7fa690>>
+DEBUG:botocore.hooks:Event choose-signer.s3.GetObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x7fda8abcdb80>>
+DEBUG:botocore.hooks:Event choose-signer.s3.GetObject: calling handler <function set_operation_specific_signer at 0x7fda9a012160>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <function remove_arn_from_signing_path at 0x7fda9a02c7c0>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x7fda8a644b60>>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+GET
+/JobIDs.json
+
+host:flytta-files-input.s3.eu-west-1.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20240529T151622Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20240529T151622Z
+20240529/eu-west-1/s3/aws4_request
+9c1825e48c8865ec2bffa5e2735ebe746184e30b3e2c3c2643b7866610cd2bb0
+DEBUG:botocore.auth:Signature:
+cea2bb4b84061a9faa0523e0251c958f168ac59a070d36575de81271f308170b
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <function add_retry_headers at 0x7fda9a02c5e0>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=True, method=GET, url=https://flytta-files-input.s3.eu-west-1.amazonaws.com/JobIDs.json, headers={'User-Agent': b'Boto3/1.34.114 md/Botocore#1.34.114 ua/2.0 os/linux#5.15.146.1-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.12.3 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.114', 'X-Amz-Date': b'20240529T151622Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA47CR267TIKQ7F5W5/20240529/eu-west-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=cea2bb4b84061a9faa0523e0251c958f168ac59a070d36575de81271f308170b', 'amz-sdk-invocation-id': b'7585bb92-ed44-4f84-879a-ed464df51bad', 'amz-sdk-request': b'attempt=1'}>
+DEBUG:botocore.httpsession:Certificate path: /usr/local/lib/python3.12/site-packages/certifi/cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): flytta-files-input.s3.eu-west-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://flytta-files-input.s3.eu-west-1.amazonaws.com:443 "GET /JobIDs.json HTTP/1.1" 200 17884
+DEBUG:botocore.parsers:Response headers: {'x-amz-id-2': 'I20F+cugqu40YGkTfRxG9lwl7dVM6L0HA+rQdJ9zxsKVQso2vET94UYR+kr29Uxk88mmljnHAOg=', 'x-amz-request-id': '19X4WQCCZVGJPHYN', 'Date': 'Wed, 29 May 2024 15:16:23 GMT', 'Last-Modified': 'Wed, 29 May 2024 11:51:50 GMT', 'ETag': '"444353ce1d0fcf9ecd757e8296efab53"', 'x-amz-server-side-encryption': 'AES256', 'Accept-Ranges': 'bytes', 'Content-Type': 'binary/octet-stream', 'Server': 'AmazonS3', 'Content-Length': '17884'}
+DEBUG:botocore.parsers:Response body:
+<botocore.response.StreamingBody object at 0x7fda8a7ae860>
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <botocore.retryhandler.RetryHandler object at 0x7fda8a644a70>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x7fda8a644500>>
+DEBUG:multipart.multipart:Calling on_field_start with no data
+DEBUG:multipart.multipart:Calling on_field_name with data[0:11]
+DEBUG:multipart.multipart:Calling on_field_data with data[12:55]
+DEBUG:multipart.multipart:Calling on_field_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:botocore.hooks:Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG:botocore.hooks:Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG:botocore.hooks:Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG:botocore.hooks:Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG:botocore.hooks:Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG:botocore.utils:IMDS ENDPOINT: http://169.254.169.254/
+DEBUG:botocore.credentials:Looking for credentials via: env
+DEBUG:botocore.credentials:Looking for credentials via: assume-role
+DEBUG:botocore.credentials:Looking for credentials via: assume-role-with-web-identity
+DEBUG:botocore.credentials:Looking for credentials via: sso
+DEBUG:botocore.credentials:Looking for credentials via: shared-credentials-file
+INFO:botocore.credentials:Found credentials in shared credentials file: ~/.aws/credentials
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/endpoints.json
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/sdk-default-configuration.json
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7f9d37f14860>
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/s3/2006-03-01/service-2.json.gz
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/s3/2006-03-01/endpoint-rule-set-1.json.gz
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/partitions.json
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x7f9d38061800>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x7f9d3799d9e0>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x7f9d38061580>
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: environment_service
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: environment_global
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: config_service
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: config_global
+DEBUG:botocore.configprovider:No configured endpoint found.
+DEBUG:botocore.endpoint:Setting s3 timeout as (60, 60)
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/_retry.json
+DEBUG:botocore.client:Registering retry handlers for service: s3
+DEBUG:botocore.utils:Registering S3 region redirector handler
+DEBUG:botocore.utils:Registering S3Express Identity Resolver
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function sse_md5 at 0x7f9d37f16520>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function validate_bucket_name at 0x7f9d37f16480>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x7f9d37f30680>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x7f9d34816780>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x7f9d34aedf40>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function generate_idempotent_uuid at 0x7f9d37f162a0>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x7f9d37f30860>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x7f9d34816780>>
+DEBUG:botocore.regions:Calling endpoint provider with parameters: {'Bucket': 'flytta-files-input', 'Region': 'eu-west-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'JobIDs.json', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+DEBUG:botocore.regions:Endpoint provider result: https://flytta-files-input.s3.eu-west-1.amazonaws.com
+DEBUG:botocore.regions:Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+DEBUG:botocore.regions:Selected auth type "v4" as "v4" with signing context params: {'region': 'eu-west-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_expect_header at 0x7f9d37f16840>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x7f9d34668e00>>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_recursion_detection_header at 0x7f9d37f15760>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function inject_api_version_header_if_needed at 0x7f9d37f17d80>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=GetObject) with params: {'url_path': '/JobIDs.json', 'query_string': {}, 'method': 'GET', 'headers': {'User-Agent': 'Boto3/1.34.114 md/Botocore#1.34.114 ua/2.0 os/linux#5.15.146.1-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.12.3 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.114'}, 'body': b'', 'auth_path': '/flytta-files-input/JobIDs.json', 'url': 'https://flytta-files-input.s3.eu-west-1.amazonaws.com/JobIDs.json', 'context': {'client_region': 'eu-west-1', 'client_config': <botocore.config.Config object at 0x7f9d34816600>, 'has_streaming_input': False, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'flytta-files-input', 'params': {'Bucket': 'flytta-files-input', 'Key': 'JobIDs.json'}}, 'input_params': {'Bucket': 'flytta-files-input', 'Key': 'JobIDs.json'}, 'signing': {'region': 'eu-west-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'eu-west-1'}]}}}
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f9d34816870>>
+DEBUG:botocore.hooks:Event choose-signer.s3.GetObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x7f9d34aedf40>>
+DEBUG:botocore.hooks:Event choose-signer.s3.GetObject: calling handler <function set_operation_specific_signer at 0x7f9d37f16160>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <function remove_arn_from_signing_path at 0x7f9d37f307c0>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x7f9d34668e00>>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+GET
+/JobIDs.json
+
+host:flytta-files-input.s3.eu-west-1.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20240529T151714Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20240529T151714Z
+20240529/eu-west-1/s3/aws4_request
+7708f63cdd76edea085c984341862d3911bf9118acf7226b6e2ba47462aeb4b3
+DEBUG:botocore.auth:Signature:
+8f21697a780b5b9ff80980b60722faa18afb1ca63a52c60d85728fb8fd7f2756
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <function add_retry_headers at 0x7f9d37f305e0>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=True, method=GET, url=https://flytta-files-input.s3.eu-west-1.amazonaws.com/JobIDs.json, headers={'User-Agent': b'Boto3/1.34.114 md/Botocore#1.34.114 ua/2.0 os/linux#5.15.146.1-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.12.3 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.114', 'X-Amz-Date': b'20240529T151714Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA47CR267TIKQ7F5W5/20240529/eu-west-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=8f21697a780b5b9ff80980b60722faa18afb1ca63a52c60d85728fb8fd7f2756', 'amz-sdk-invocation-id': b'546e6025-5ce1-4530-8eda-c0fd97b92fcc', 'amz-sdk-request': b'attempt=1'}>
+DEBUG:botocore.httpsession:Certificate path: /usr/local/lib/python3.12/site-packages/certifi/cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): flytta-files-input.s3.eu-west-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://flytta-files-input.s3.eu-west-1.amazonaws.com:443 "GET /JobIDs.json HTTP/1.1" 200 17884
+DEBUG:botocore.parsers:Response headers: {'x-amz-id-2': 'SCnwf1ERR/YrhZwF2AZmCyop/icJt6hckq7wc0QDMzl/sF0XLLoM+4ULiIAV9YLjUDEB90uv+Vg=', 'x-amz-request-id': '2SNS1DZN544DX42X', 'Date': 'Wed, 29 May 2024 15:17:16 GMT', 'Last-Modified': 'Wed, 29 May 2024 11:51:50 GMT', 'ETag': '"444353ce1d0fcf9ecd757e8296efab53"', 'x-amz-server-side-encryption': 'AES256', 'Accept-Ranges': 'bytes', 'Content-Type': 'binary/octet-stream', 'Server': 'AmazonS3', 'Content-Length': '17884'}
+DEBUG:botocore.parsers:Response body:
+<botocore.response.StreamingBody object at 0x7f9d3466b520>
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <botocore.retryhandler.RetryHandler object at 0x7f9d34668d10>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x7f9d34816780>>
+DEBUG:multipart.multipart:Calling on_field_start with no data
+DEBUG:multipart.multipart:Calling on_field_name with data[0:11]
+DEBUG:multipart.multipart:Calling on_field_data with data[12:55]
+DEBUG:multipart.multipart:Calling on_field_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:botocore.hooks:Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG:botocore.hooks:Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG:botocore.hooks:Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG:botocore.hooks:Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG:botocore.hooks:Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG:botocore.utils:IMDS ENDPOINT: http://169.254.169.254/
+DEBUG:botocore.credentials:Looking for credentials via: env
+DEBUG:botocore.credentials:Looking for credentials via: assume-role
+DEBUG:botocore.credentials:Looking for credentials via: assume-role-with-web-identity
+DEBUG:botocore.credentials:Looking for credentials via: sso
+DEBUG:botocore.credentials:Looking for credentials via: shared-credentials-file
+INFO:botocore.credentials:Found credentials in shared credentials file: ~/.aws/credentials
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/endpoints.json
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/sdk-default-configuration.json
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7f84076c8860>
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/s3/2006-03-01/service-2.json.gz
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/s3/2006-03-01/endpoint-rule-set-1.json.gz
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/partitions.json
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x7f8407819800>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x7f84071499e0>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x7f8407819580>
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: environment_service
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: environment_global
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: config_service
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: config_global
+DEBUG:botocore.configprovider:No configured endpoint found.
+DEBUG:botocore.endpoint:Setting s3 timeout as (60, 60)
+DEBUG:botocore.loaders:Loading JSON file: /usr/local/lib/python3.12/site-packages/botocore/data/_retry.json
+DEBUG:botocore.client:Registering retry handlers for service: s3
+DEBUG:botocore.utils:Registering S3 region redirector handler
+DEBUG:botocore.utils:Registering S3Express Identity Resolver
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function sse_md5 at 0x7f84076ca520>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function validate_bucket_name at 0x7f84076ca480>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x7f84076e4680>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x7f83effba6f0>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x7f8404299b80>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function generate_idempotent_uuid at 0x7f84076ca2a0>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x7f84076e4860>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x7f83effba6f0>>
+DEBUG:botocore.regions:Calling endpoint provider with parameters: {'Bucket': 'flytta-files-input', 'Region': 'eu-west-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'JobIDs.json', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+DEBUG:botocore.regions:Endpoint provider result: https://flytta-files-input.s3.eu-west-1.amazonaws.com
+DEBUG:botocore.regions:Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+DEBUG:botocore.regions:Selected auth type "v4" as "v4" with signing context params: {'region': 'eu-west-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_expect_header at 0x7f84076ca840>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x7f83efe00ad0>>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_recursion_detection_header at 0x7f84076c9760>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function inject_api_version_header_if_needed at 0x7f84076cbd80>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=GetObject) with params: {'url_path': '/JobIDs.json', 'query_string': {}, 'method': 'GET', 'headers': {'User-Agent': 'Boto3/1.34.114 md/Botocore#1.34.114 ua/2.0 os/linux#5.15.146.1-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.12.3 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.114'}, 'body': b'', 'auth_path': '/flytta-files-input/JobIDs.json', 'url': 'https://flytta-files-input.s3.eu-west-1.amazonaws.com/JobIDs.json', 'context': {'client_region': 'eu-west-1', 'client_config': <botocore.config.Config object at 0x7f83effba510>, 'has_streaming_input': False, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'flytta-files-input', 'params': {'Bucket': 'flytta-files-input', 'Key': 'JobIDs.json'}}, 'input_params': {'Bucket': 'flytta-files-input', 'Key': 'JobIDs.json'}, 'signing': {'region': 'eu-west-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'eu-west-1'}]}}}
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f83effba5d0>>
+DEBUG:botocore.hooks:Event choose-signer.s3.GetObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x7f8404299b80>>
+DEBUG:botocore.hooks:Event choose-signer.s3.GetObject: calling handler <function set_operation_specific_signer at 0x7f84076ca160>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <function remove_arn_from_signing_path at 0x7f84076e47c0>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x7f83efe00ad0>>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+GET
+/JobIDs.json
+
+host:flytta-files-input.s3.eu-west-1.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20240529T151727Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20240529T151727Z
+20240529/eu-west-1/s3/aws4_request
+780c11865bf6f9b5df70bd406829eb324431d89d6af39ebbc5f9163c07d6d1c8
+DEBUG:botocore.auth:Signature:
+6034424c8ddb0028a7f24ded0279a506a88fc55edf800ed56015f62a8db175ce
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <function add_retry_headers at 0x7f84076e45e0>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=True, method=GET, url=https://flytta-files-input.s3.eu-west-1.amazonaws.com/JobIDs.json, headers={'User-Agent': b'Boto3/1.34.114 md/Botocore#1.34.114 ua/2.0 os/linux#5.15.146.1-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.12.3 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.114', 'X-Amz-Date': b'20240529T151727Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA47CR267TIKQ7F5W5/20240529/eu-west-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=6034424c8ddb0028a7f24ded0279a506a88fc55edf800ed56015f62a8db175ce', 'amz-sdk-invocation-id': b'539e752f-9b14-498e-a339-8e45c519c7fe', 'amz-sdk-request': b'attempt=1'}>
+DEBUG:botocore.httpsession:Certificate path: /usr/local/lib/python3.12/site-packages/certifi/cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): flytta-files-input.s3.eu-west-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://flytta-files-input.s3.eu-west-1.amazonaws.com:443 "GET /JobIDs.json HTTP/1.1" 200 17884
+DEBUG:botocore.parsers:Response headers: {'x-amz-id-2': 'cBarmnlwpbbtuswEYMBE0Cq38P1slHR+a39ecBugUhzWAhBN1oWp/8TRL9Y4uO89L07EAG1qRUA=', 'x-amz-request-id': 'SKYGBWBTJMG0JB35', 'Date': 'Wed, 29 May 2024 15:17:28 GMT', 'Last-Modified': 'Wed, 29 May 2024 11:51:50 GMT', 'ETag': '"444353ce1d0fcf9ecd757e8296efab53"', 'x-amz-server-side-encryption': 'AES256', 'Accept-Ranges': 'bytes', 'Content-Type': 'binary/octet-stream', 'Server': 'AmazonS3', 'Content-Length': '17884'}
+DEBUG:botocore.parsers:Response body:
+<botocore.response.StreamingBody object at 0x7f83efe03190>
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <botocore.retryhandler.RetryHandler object at 0x7f83efe009e0>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x7f83effba6f0>>
+DEBUG:multipart.multipart:Calling on_field_start with no data
+DEBUG:multipart.multipart:Calling on_field_name with data[0:11]
+DEBUG:multipart.multipart:Calling on_field_data with data[12:161]
+DEBUG:multipart.multipart:Calling on_field_end with no data
+DEBUG:multipart.multipart:Calling on_end with no data
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7f84076c8860>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x7f8407819800>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function lazy_call.<locals>._handler at 0x7f84071499e0>
+DEBUG:botocore.hooks:Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x7f8407819580>
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: environment_service
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: environment_global
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: config_service
+DEBUG:botocore.configprovider:Looking for endpoint for s3 via: config_global
+DEBUG:botocore.configprovider:No configured endpoint found.
+DEBUG:botocore.endpoint:Setting s3 timeout as (60, 60)
+DEBUG:botocore.client:Registering retry handlers for service: s3
+DEBUG:botocore.utils:Registering S3 region redirector handler
+DEBUG:botocore.utils:Registering S3Express Identity Resolver
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function sse_md5 at 0x7f84076ca520>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function validate_bucket_name at 0x7f84076ca480>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x7f84076e4680>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x7f840901eb10>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x7f83effbac90>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function generate_idempotent_uuid at 0x7f84076ca2a0>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x7f84076e4860>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x7f840901eb10>>
+DEBUG:botocore.regions:Calling endpoint provider with parameters: {'Bucket': 'flytta-files-input', 'Region': 'eu-west-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'mastermedia/2024-04-22:19:32:10-1b79728e/MASTERMEDIA UK LTD(944)_20240422_KADMEX_WGM3334F_WGM1596P.xlsx', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+DEBUG:botocore.regions:Endpoint provider result: https://flytta-files-input.s3.eu-west-1.amazonaws.com
+DEBUG:botocore.regions:Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+DEBUG:botocore.regions:Selected auth type "v4" as "v4" with signing context params: {'region': 'eu-west-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_expect_header at 0x7f84076ca840>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x7f83efe7a7e0>>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_recursion_detection_header at 0x7f84076c9760>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function inject_api_version_header_if_needed at 0x7f84076cbd80>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=GetObject) with params: {'url_path': '/mastermedia/2024-04-22%3A19%3A32%3A10-1b79728e/MASTERMEDIA%20UK%20LTD%28944%29_20240422_KADMEX_WGM3334F_WGM1596P.xlsx', 'query_string': {}, 'method': 'GET', 'headers': {'User-Agent': 'Boto3/1.34.114 md/Botocore#1.34.114 ua/2.0 os/linux#5.15.146.1-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.12.3 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.114'}, 'body': b'', 'auth_path': '/flytta-files-input/mastermedia/2024-04-22%3A19%3A32%3A10-1b79728e/MASTERMEDIA%20UK%20LTD%28944%29_20240422_KADMEX_WGM3334F_WGM1596P.xlsx', 'url': 'https://flytta-files-input.s3.eu-west-1.amazonaws.com/mastermedia/2024-04-22%3A19%3A32%3A10-1b79728e/MASTERMEDIA%20UK%20LTD%28944%29_20240422_KADMEX_WGM3334F_WGM1596P.xlsx', 'context': {'client_region': 'eu-west-1', 'client_config': <botocore.config.Config object at 0x7f8404097fe0>, 'has_streaming_input': False, 'auth_type': 'v4', 's3_redirect': {'redirected': False, 'bucket': 'flytta-files-input', 'params': {'Bucket': 'flytta-files-input', 'Key': 'mastermedia/2024-04-22:19:32:10-1b79728e/MASTERMEDIA UK LTD(944)_20240422_KADMEX_WGM3334F_WGM1596P.xlsx'}}, 'input_params': {'Bucket': 'flytta-files-input', 'Key': 'mastermedia/2024-04-22:19:32:10-1b79728e/MASTERMEDIA UK LTD(944)_20240422_KADMEX_WGM3334F_WGM1596P.xlsx'}, 'signing': {'region': 'eu-west-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'eu-west-1'}]}}}
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f83effba8a0>>
+DEBUG:botocore.hooks:Event choose-signer.s3.GetObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x7f83effbac90>>
+DEBUG:botocore.hooks:Event choose-signer.s3.GetObject: calling handler <function set_operation_specific_signer at 0x7f84076ca160>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <function remove_arn_from_signing_path at 0x7f84076e47c0>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x7f83efe7a7e0>>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+GET
+/mastermedia/2024-04-22%3A19%3A32%3A10-1b79728e/MASTERMEDIA%20UK%20LTD%28944%29_20240422_KADMEX_WGM3334F_WGM1596P.xlsx
+
+host:flytta-files-input.s3.eu-west-1.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20240529T151815Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20240529T151815Z
+20240529/eu-west-1/s3/aws4_request
+52a01cff92bc21d366c25d900c72fcbc3a91f9fcec5bcaa6c8dd32a50809f342
+DEBUG:botocore.auth:Signature:
+ec984e42c3ec8f9de668ad31372ba1a073fbaf3011d22b2854f7bb13514f376c
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <function add_retry_headers at 0x7f84076e45e0>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=True, method=GET, url=https://flytta-files-input.s3.eu-west-1.amazonaws.com/mastermedia/2024-04-22%3A19%3A32%3A10-1b79728e/MASTERMEDIA%20UK%20LTD%28944%29_20240422_KADMEX_WGM3334F_WGM1596P.xlsx, headers={'User-Agent': b'Boto3/1.34.114 md/Botocore#1.34.114 ua/2.0 os/linux#5.15.146.1-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.12.3 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.34.114', 'X-Amz-Date': b'20240529T151815Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIA47CR267TIKQ7F5W5/20240529/eu-west-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=ec984e42c3ec8f9de668ad31372ba1a073fbaf3011d22b2854f7bb13514f376c', 'amz-sdk-invocation-id': b'de16c61e-12ca-4a88-8ee8-aa5d79868f41', 'amz-sdk-request': b'attempt=1'}>
+DEBUG:botocore.httpsession:Certificate path: /usr/local/lib/python3.12/site-packages/certifi/cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): flytta-files-input.s3.eu-west-1.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://flytta-files-input.s3.eu-west-1.amazonaws.com:443 "GET /mastermedia/2024-04-22%3A19%3A32%3A10-1b79728e/MASTERMEDIA%20UK%20LTD%28944%29_20240422_KADMEX_WGM3334F_WGM1596P.xlsx HTTP/1.1" 200 403382
+DEBUG:botocore.parsers:Response headers: {'x-amz-id-2': '8i6nqa37uvYYoHs89cSNQ4Jmv90uTqWUYnYnC10znmnk1gS5HwzVI3q+cjrCcGy68DSHNJWMMNM=', 'x-amz-request-id': 'Z8HEDSPZ51VV2NSH', 'Date': 'Wed, 29 May 2024 15:18:16 GMT', 'Last-Modified': 'Mon, 22 Apr 2024 19:32:11 GMT', 'ETag': '"af3b08fb944b9f19d4e4f262f5e4072a"', 'x-amz-server-side-encryption': 'AES256', 'Accept-Ranges': 'bytes', 'Content-Type': 'binary/octet-stream', 'Server': 'AmazonS3', 'Content-Length': '403382'}
+DEBUG:botocore.parsers:Response body:
+<botocore.response.StreamingBody object at 0x7f83efe88190>
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <botocore.retryhandler.RetryHandler object at 0x7f83efe7a780>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x7f840901eb10>>
+ERROR:root:An error occurred: 'utf-8' codec can't decode byte 0x96 in position 12: invalid start byte
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 776, in app
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/usr/local/lib/python3.12/site-packages/starlette/routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 296, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/routing.py", line 180, in serialize_response
+    return jsonable_encoder(response_content)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/encoders.py", line 289, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+                    ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/encoders.py", line 318, in jsonable_encoder
+    return ENCODERS_BY_TYPE[type(obj)](obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/fastapi/encoders.py", line 59, in <lambda>
+    bytes: lambda o: o.decode(),
+                     ^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x96 in position 12: invalid start byte

@@ -8,6 +8,7 @@ services:
       - 5678:5678
     volumes:
       - .:/code
+      - ~/.aws:/root/.aws:ro  # Map local .aws directory to container's .aws directory (ro = read-only)
     depends_on:
       - redis
 
